@@ -1,0 +1,15 @@
+<form class="form form-compose" [formGroup]="composeControl">
+  <p>
+    <label for="to">To:</label>
+    <input type="text" id="to" formControlName="to" class="input">
+  </p>
+  <p>
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" formControlName="subject" class="input">
+  </p>
+  <p>
+    <label for="body">Message:</label>
+    <textarea id="body" formControlName="body" class="input compose-message"></textarea>
+  </p>
+  <p class="f-center"><button (click)="send(); $event.preventDefault()">Submit</button></p>
+</form>

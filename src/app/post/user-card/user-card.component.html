@@ -1,0 +1,9 @@
+<figure class="snip1336">
+  <img src="assets/images/sample87.jpg" alt="sample87" />
+  <figcaption [style.background]="backgroundColor">
+    <img [src]="user.avatarUrl" alt="profile-sample4" class="profile" />
+    <h2>{{user.fullName}}<span>{{user.email}}</span></h2>
+    <button class="follow" (click)="chooseAccount()">Show letters</button>
+  </figcaption>
+  <button class="user-delete" (click)="deleteAccount()">+</button>
+</figure>

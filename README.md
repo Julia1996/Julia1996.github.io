@@ -1,3 +1,9 @@
+У меня тут есть сложности, посмотрите пожалуйста.
+
+1. При добавлении и удалении юзера нужно перезагружать страницу, чтобы увидеть изменения. 
+
+2. Не отправляется новое письмо.
+
 # Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.

@@ -1,0 +1,12 @@
+<form class="form" [formGroup]="loginControl">
+  <p>
+    <label for="login">Login:</label>
+    <input formControlName="login" id="login" class="input">
+  </p>
+  <p>
+    <label for="password">Password:</label>
+    <input type="password" formControlName="password" id="password" class="input">
+  </p>
+
+  <p class="f-center"><button (click)="login()">Log in</button></p>
+</form>

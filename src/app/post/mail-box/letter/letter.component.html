@@ -1,0 +1,25 @@
+<a routerLink="/post/letter/{{letter._id}}" class="email-item row">
+  <div class="people col-sm-3">
+    <ul class="mail-icons list-inline">
+      <li>
+        <input type="checkbox" class="mail-select" (click)="$event.stopPropagation()">
+      </li>
+    </ul>
+
+    <span class="people-names">
+      {{letter.to}}
+    </span>
+  </div><!-- people -->
+
+  <div class="message col-sm-7">
+    <div class="clipper">
+      <h3>{{letter.subject}}</h3>
+      -
+      {{letter.body}}
+    </div>
+  </div><!-- message -->
+
+  <div class="date col-sm-2">
+    <date class="pull-right">{{letter.date}}</date>
+  </div><!-- date -->
+</a>

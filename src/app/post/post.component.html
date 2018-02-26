@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <header class="row">
+    <div class="logo col-sm-2">
+      Angular-mail
+    </div><!-- logo -->
+
+    <app-search (inputSearchPhrase)="searchLetters($event)"></app-search>
+
+    <div class="profile col-sm-4">
+      <ul class="profile-icons list-inline pull-right">
+        <li class="current-user">
+          Julia
+        </li>
+        <button *ngIf="autorizationService.isAutorized" (click)="logOut()">Logout</button>
+      </ul>
+    </div><!-- profile -->
+  </header>
+
+  <div class="mail row">
+    <div class="sidebar col-sm-2">
+      <a class="compose btn btn-danger" routerLink="/post/compose">
+        Compose
+      </a>
+
+      <ul class="inbox-sections list-unstyled">
+        <li>
+          <a routerLink="/post/letters/inbox" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inbox</a>
+        </li>
+        <li>
+          <a routerLink="/post/letters/output" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Sent Mail</a>
+        </li>
+        <li>
+          <a routerLink="/post/letters/spam" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Spam</a>
+        </li>
+      </ul>
+    </div><!-- sidebar -->
+
+    <div class="inbox col-sm-10">
+      <router-outlet></router-outlet>
+    </div><!-- inbox -->
+  </div><!-- mail -->
+</div>
+
+<h3>Your address book</h3>
+<div class="clearfix">
+  <app-user-card *ngFor="let user of users" [user]="user" (onChooseAccount)="showLetters($event)" (onDeleteAccount)="deleteAccount($event)"></app-user-card>
+</div>
+
+<app-add-user (userAppear)="getUsers()"></app-add-user>

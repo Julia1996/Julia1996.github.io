@@ -1,0 +1,9 @@
+.letter{
+  margin: 10px 0;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,12 @@
+<div class="search-bar col-sm-6">
+  <form (submit)="search($event, phrase.value)" class="input-group">
+    <input type="text" class="form-control" placeholder="Search for..." #phrase [value]="getQuery()">
+    <span class="input-group-btn">
+      <button class="btn btn-main">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </form>
+
+  <span class="arrow caret"></span>
+</div><!-- search-bar -->

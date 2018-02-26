@@ -1,0 +1,27 @@
+<form [formGroup]="addUserControl" class="form">
+  <h3>Add new user</h3>
+  <p>
+    <label for="firstName">First name (min length: 2):</label>
+    <input formControlName="firstName" id="firstName" class="input">
+  </p>
+  <p>
+    <label for="lastName">Last name (min length: 2):</label>
+    <input formControlName="lastName" id="lastName" class="input">
+  </p>
+  <p>
+    Sex <b class="red">*</b>:
+    <span class="input">
+      <label><input type="radio" formControlName="sex" value="M">Male</label>
+      <label><input type="radio" formControlName="sex" value="F">Female</label>
+    </span>
+  </p>
+  <p>
+    <label for="birthDate">Birth date (you should be older then 18):</label>
+    <input type="date" formControlName="birthDate" id="birthDate" class="input">
+  </p>
+  <p>
+    <label for="email">Email:</label>
+    <input type="email" formControlName="email" id="email" class="input">
+  </p>
+  <p class="f-center"><button type="button" (click)="addUser()">Submit</button></p>
+</form>
